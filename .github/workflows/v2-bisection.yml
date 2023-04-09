@@ -26,7 +26,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: v2.0
+          ref: xz9/v2.0-test
       - name: Create conda environment
         run: |
           set -x
