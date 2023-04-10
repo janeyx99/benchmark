@@ -41,7 +41,7 @@ jobs:
           # install ncurses 6.3 from conda-forge, the default ncurses package in the anaconda channel
           # doesn't package properly to include libtinfo dependency
           # the conda-forge version is correct
-          conda install -y ncurses -c conda-forge --force-reinstall
+          conda install -y ncurses=6.3 -c conda-forge --force-reinstall
           # Install magma
           conda install -y -c pytorch "${MAGMA_VER}"
       - name: Bisection
