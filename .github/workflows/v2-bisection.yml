@@ -38,6 +38,10 @@ jobs:
                            typing_extensions future six dataclasses tabulate gitpython git-lfs tqdm regex
           # install cmake 3.26 from conda-forge, cmake > 3.24 is required by torchaudio
           conda install -y cmake="${CMAKE_VER}" -c conda-forge
+          # install ncurses 6.3 from conda-forge, the default ncurses package in the anaconda channel
+          # doesn't package properly to include libtinfo dependency
+          # the conda-forge version is correct
+          conda install -y ncurses -c conda-forge
           # Install magma
           conda install -y -c pytorch "${MAGMA_VER}"
       - name: Bisection
