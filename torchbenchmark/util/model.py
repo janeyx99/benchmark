@@ -301,7 +301,7 @@ class BenchmarkModel(metaclass=PostInitProcessor):
 
         if optimizer is not None:
             with nested(*self.optimizer_contexts):
-                self.optimizer()
+                self.optimizer_step()
 
         return None
 
